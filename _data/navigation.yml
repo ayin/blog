@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "时间归档"
+    url: /year-archive/
+  - title: "类别归档"
+    url : /categories/
+  - title: "标签归档"
+    url : /tags/
+  - title: "关于"
+    url: /about/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
