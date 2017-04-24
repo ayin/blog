@@ -1,0 +1,2 @@
+代表了Client与Server之间的连通
+

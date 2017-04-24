@@ -24,24 +24,24 @@ Java的并发主要采用的是共享内存的模型
 
 ## Java内存模型的抽象结构
 
-![Java内存模型的抽象结构示意图](/assets/image/TheArtOfJavaConcurrencyProgramming/JMM.png)
+![Java内存模型的抽象结构示意图]({{ site.baseurl }}/assets/image/TheArtOfJavaConcurrencyProgramming/JMM.png)
 
 ## 从源代码到指令序列的重排序
 * 编译器重排序：编译器优化重排序
 * 处理器重排序：指令系统重排序
 * 处理器重排序：内存系统的重排序
 
-![指令重排](/assets/image/TheArtOfJavaConcurrencyProgramming/instructions-reorder.png)
+![指令重排]({{ site.baseurl }}/assets/image/TheArtOfJavaConcurrencyProgramming/instructions-reorder.png)
 
 ## 并发编程模型的分类
 
 为了优化下，现代处理器都提供有写缓存区，通过批量写提高性能，因此现代处理器都允许对”写读”操作进行重排序
 
-![常见处理器的重排序规则](/assets/image/TheArtOfJavaConcurrencyProgramming/CPU-reorder.png)
+![常见处理器的重排序规则]({{ site.baseurl }}/assets/image/TheArtOfJavaConcurrencyProgramming/CPU-reorder.png)
 
 为了保证内存可见性，Java编译器在生成指令序列时会在合适位置插入内存屏障指令来禁止特定类型的处理器重排序，JMM把内存指令分为4类：
 
-![内存屏障指令](/assets/image/TheArtOfJavaConcurrencyProgramming/memory-barrier-instructions.png)
+![内存屏障指令]({{ site.baseurl }}/assets/image/TheArtOfJavaConcurrencyProgramming/memory-barrier-instructions.png)
 
 StoreLoad Barriers是一个“全能型”的屏障，它同时具有其他三个屏障的效果。现代的多处理器大都支持该屏障（其他类型的屏障不一定被所有处理器支持）。执行该屏障开销会很昂贵，因为当前处理器通常要把写缓冲区中的数据全部刷新到内存中（buffer fully flush）
 

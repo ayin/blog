@@ -3,8 +3,7 @@ title: Mysql Truncate Partition
 categories:
   - Technology
 tags:
-  - Mysql
-  - 小知识点
+  - 数据库
 excerpt: ALTER TABLE t1 TRUNCATE PARTITION p0
 ---
 
